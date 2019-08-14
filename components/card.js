@@ -10,13 +10,45 @@ const Card = props => (
     </Cover>
     <Content>
       <Logo source={require("../assets/logo-react.png")} />
-      <Caption>React Native</Caption>
-      <Subtitle>5 of 12 sections</Subtitle>
+      <Wrapper>
+        <Caption>React Native</Caption>
+        <Subtitle>5 of 12 sections</Subtitle>
+      </Wrapper>
     </Content>
   </Container>
 );
 
 export default Card;
+
+const Content = styled.View`
+  padding-left: 20px;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+`;
+
+const Logo = styled.Image`
+  width: 44px;
+  height: 44px;
+`;
+
+const Caption = styled.Text`
+  color: #3c4560;
+  font-size: 20px;
+  font-weight: 600;
+`;
+
+const Subtitle = styled.Text`
+  color: #b8bece;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 4px;
+`;
+
+const Wrapper = styled.View`
+  margin-left: 10px;
+`;
 
 const Container = styled.View`
   background: white;
