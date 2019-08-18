@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, SafeAreaView } from "react-native";
 import styled from "styled-components";
 import Card from "./components/card.js";
 
@@ -7,34 +7,36 @@ export default class App extends React.Component {
   render() {
     return (
       <Container>
-        <ScrollView style={{ height: "100%" }}>
-          <TitleBar>
-            <Avatar source={require("./assets/avatar.jpg")} />
-            <Title>Welcome back,</Title>
-            <Name>Kristea</Name>
-          </TitleBar>
-          <Subtitle>Workout like a Boss</Subtitle>
-          <ScrollView
-            horizontal={true}
-            style={{ paddingBottom: 30 }}
-            showsHorizontalScrollIndicator={false}
-          >
-            <Card
-              title="Styled Components"
-              image={require("./assets/background2.jpg")}
-              caption="React Native"
-              logo={require("./assets/logo-react.png")}
-              subtitle="5 of 12 sections"
-            />
-            <Card
-              title="Styled Components 2"
-              image={require("./assets/background1.jpg")}
-              caption="React Native"
-              logo={require("./assets/logo-react.png")}
-              subtitle="5 of 12 sections"
-            />
+        <SafeAreaView>
+          <ScrollView style={{ height: "100%" }}>
+            <TitleBar>
+              <Avatar source={require("./assets/avatar.jpg")} />
+              <Title>Welcome back,</Title>
+              <Name>Kristea</Name>
+            </TitleBar>
+            <Subtitle>Workout like a Boss</Subtitle>
+            <ScrollView
+              horizontal={true}
+              style={{ paddingBottom: 30 }}
+              showsHorizontalScrollIndicator={false}
+            >
+              <Card
+                title="Styled Components"
+                image={require("./assets/background2.jpg")}
+                caption="React Native"
+                logo={require("./assets/logo-react.png")}
+                subtitle="5 of 12 sections"
+              />
+              <Card
+                title="Styled Components 2"
+                image={require("./assets/background1.jpg")}
+                caption="React Native"
+                logo={require("./assets/logo-react.png")}
+                subtitle="5 of 12 sections"
+              />
+            </ScrollView>
           </ScrollView>
-        </ScrollView>
+        </SafeAreaView>
       </Container>
     );
   }
