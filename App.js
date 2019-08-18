@@ -7,14 +7,18 @@ export default class App extends React.Component {
   render() {
     return (
       <Container>
-        <ScrollView>
+        <ScrollView style={{ height: "100%" }}>
           <TitleBar>
             <Avatar source={require("./assets/avatar.jpg")} />
             <Title>Welcome back,</Title>
             <Name>Kristea</Name>
           </TitleBar>
           <Subtitle>Workout like a Boss</Subtitle>
-          <ScrollView horizontal={true}>
+          <ScrollView
+            horizontal={true}
+            style={{ paddingBottom: 30 }}
+            showsHorizontalScrollIndicator={false}
+          >
             <Card
               title="Styled Components"
               image={require("./assets/background2.jpg")}
